@@ -1,0 +1,59 @@
+\documentclass[12pt,twoside]{article}
+\usepackage{jmlda}
+%\NOREVIEWERNOTES
+\title
+    [Построение модели декодирования сигналов при моделировании нейрокомпьютерного интерфейса. ] % Краткое название; не нужно, если полное название влезает в~колонтитул
+    {Прогнозирование намерений. Построение оптимальной модели декодирования сигналов при моделировании нейрокомпьютерного интерфейса.}
+\author
+    {Качесов~В.\,В.} % основной список авторов, выводимый в оглавление
+
+\email
+    {kachesov.vv@phystech.edu}
+\organization
+    {МФТИ (ГУ)}
+\abstract
+    {Нейрокомпьютерный интерфейс (НКИ) позволяет помочь людям с ограниченными возможностями вернуть их мобильность. По имеющемуся описанию сигнала прибора можно смоделировать поведение субъекта. В данной работе построена единая система, решающая задачу декодирования сигналов. В качестве этапов построения такой системы были решены задачи предобработки данных, выделения признакового пространства, снижения размерности и выбора модели оптимальной сложности. В работе учитывается комплексная природа сигнала: непрерывная траектория движения, наличие дискретных структурных переменных, наличие непрерывных переменных.
+
+\bigskip
+%\textbf{Ключевые слова}: \emph {ключевое слово, ключевое слово, еще ключевые слова}.
+}
+
+\begin{document}
+\maketitle
+
+\section {Введение}
+    {При помощи НКИ можно вернуть утерянные возможности людям людям, по тем или иным причинам, потерявшим мобильность, а так же может вывести взаимодействия типа пользователь-компьютер на новый уровень. Основываясь на сигналах снятых с коры головного мозга, полученных при помощи EEG и MEG, можно построить оптимальную модель декодирования этих сигналов при моделлировании нейрокомпьютерного интерфейса, что и является целью данной работы. Эта модель должна выдавть не просто некий скаляр, а непосредственно комплексное описание состояния каждого элемента протеза, с учетом анатомических особенностей. Сложность этой задачи заключается не только в том, что необходимио сопоставить адекватное движение принятому сигналу, но и в том, что сам этот сигнал необходимо вычленить на фоне физических и физиологических шумов, которые неизбежно проявляют себя в ходе измерений\cite{Sotnikov}. Для обработки сигналов активно используются инструменты тензорного анализа\cite{Eliseyev1}\cite{Eliseyev2}, наряду с методами наименьших частных квадратов (pls)\cite{Ng.}  и главных компонент (pca)\cite{Brems}. Для исследования используются данные из библиотеки сигналов человеческого мозга ECoG\cite{Miller}.
+}
+
+\begin{thebibliography}{}
+\bibitem{Sotnikov}
+    \BibAuthor{Sotnikov P.}
+    \BibTitle{Overview of EEG Signal Processing Techniques in Brain-Computer Interfaces}~//
+    \BibJournal{ENGINEERING BULLETIN}. 2014.
+    \BibUrl{http://engbul.bmstu.ru/doc/739934.html}
+\bibitem{Eliseyev1}
+    \BibAuthor{Andrey Eliseyev.}
+    \BibTitle{L1-Penalized N-way PLS for subset of electrodes selection in BCI experiments}~//
+    \BibJournal{The Journal of Neuroscience}. 2011.
+    \BibUrl{http://iopscience.iop.org/article/10.1088/1741-2560/9/4/045010/pdf}
+\bibitem{Eliseyev2}
+    \BibAuthor{Andrey Eliseyev.}
+    \BibTitle{Iterative N-way partial least squares for a binary self-paced brain–computer interface in freely moving animals}~//
+    \BibJournal{The Journal of Neuroscience}. 2011.
+    \BibUrl{http://iopscience.iop.org/article/10.1088/1741-2560/8/4/046012/pdf}
+\bibitem{Ng.}
+    \BibAuthor{Kee Siong Ng.}
+    \BibTitle{A Simple Explanation of Partial Least Squares}~//
+    \BibUrl{http://users.cecs.anu.edu.au/~kee/pls.pdf}
+\bibitem{Brems}
+    \BibAuthor{Matt Brems.}
+    \BibTitle{A One-Stop Shop for Principal Component Analysis}~//
+    \BibUrl{https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c}
+\bibitem{Miller}
+    \BibAuthor{Kai	J.	Miller.}
+    \BibTitle{A	Library	of	Human	Electrocorticographic	Data	and	Analyses}~//
+    \BibUrl{https://stacks.stanford.edu/file/druid:zk881ps0522/kjm_ECoGLibrary_v7.pdf}
+
+\end{thebibliography}
+
+\end{document} 
